@@ -1,10 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 <body>
-
+<nav id="desktop-nav">
+    <div class="logo">Dmytro Pohorielov</div>
+    <div>
+        <ul class="nav-links">
+            <li><a href="#about">Über mich</a></li>
+            <li><a href="#experience">Erfahrung</a></li>
+            <li><a href="#projects">Projekte</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </div>
+</nav>
+<nav id="hamburger-nav">
+    <div class="logo">Dmytro Pohorielov</div>
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">Über mich</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Erfahrung</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projekte</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
+        </div>
+    </div>
+</nav>
+<section id="profile">
+    <div class="section__pic-container">
+        <img src="./assets/profile-pic1.jpeg"
+             alt="Dmytro Pohorielov profile picture"
+             class="main-pic"/>
+    </div>
+    <div class="section__text">
+        <p class="section__text__p1">Hallo, Ich bin</p>
+        <h1 class="title">Dmytro Pohorielov</h1>
+        <p class="section__text__p2">Frontend Entwickler</p>
+        <div class="btn-container">
+            <button
+                    class="btn btn-color-2"
+                    onclick="window.open('./assets/resume-example.pdf')"
+            >
+                Lebenslauf herunterladen
+            </button>
+            <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                Kontakt
+            </button>
+        </div>
+        <div id="socials-container">
+            <img
+                    src="./assets/linkedin.png"
+                    alt="My LinkedIn profile"
+                    class="icon"
+                    onclick="window.open('https://www.linkedin.com/in/dmitriy-pohorielov-7b645a250/', '_blank')"
+            />
+            <img
+                    src="./assets/github.png"
+                    alt="My Github profile"
+                    class="icon"
+                    onclick="window.open('https://github.com/Dima87Po', '_blank')"
+            />
+        </div>
+    </div>
+</section>
+<section id="about">
+    <p class="section__text__p1">Mehr erfahren</p>
+    <h1 class="title">Über mich</h1>
+    <div class="section-container">
+        <div class="section__pic-container">
+            <img
+                    src="./assets/about-pic1.jpeg"
+                    alt="Profile picture"
+                    class="about-pic"
+            />
+        </div>
+        <div class="about-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <img
+                            src="./assets/experience.png"
+                            alt="Experience icon"
+                            class="icon"
+                    />
+                    <h3>Erfahrung</h3>
+                    <p>3+ Jahre <br />Frontend-Entwicklung</p>
+                </div>
+                <div class="details-container">
+                    <img
+                            src="./assets/education.png"
+                            alt="Education icon"
+                            class="icon"
+                    />
+                    <h3>Ausbildung</h3>
+                    <p>B.Sc. Bachelor<br />M.Sc. Master</p>
+                </div>
+            </div>
+            <div class="text-container">
+                <p>
+                    Ich bin ein erfahrener Entwickler mit Schwerpunkt auf skalierbaren und benutzerfreundlichen Softwarelösungen.
+                    Meine Stärken liegen in Angular, TypeScript, Java, HTML/CSS, UI/UX und Performance-Optimierung.
+                    Zudem verfüge ich über Kenntnisse in Informationssicherheit und sicherer Softwareentwicklung.
+                    Ich arbeite gerne im Team, bin engagiert und flexibel in dynamischen Arbeitsumgebungen.
+                    Darüber hinaus bringe ich Erfahrung in der Optimierung von Entwicklungsprozessen mit und lege großen Wert auf Qualität, Nachhaltigkeit und kontinuierliche Verbesserung.
+                </p>
+            </div>
+        </div>
+    </div>
+    <img
+            src="./assets/arrow.png"
+            alt="Arrow icon"
+            class="icon arrow"
+            onclick="location.href='./#experience'"
+    />
+</section>
+<section id="experience">
+    <p class="section__text__p1">Meine Erfahrungen</p>
+    <h1 class="title">entdecken</h1>
+    <div class="experience-details-container">
+        <div class="about-containers">
+            <div class="details-container">
+                <h2 class="experience-sub-title">Frontend-Entwicklung</h2>
+                <div class="article-container">
+                    <article>
+                        <img
+                                src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                        />
+                        <div>
+                            <h3>HTML</h3>
+                            <p>Erfahren</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img
+                                src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                        />
+                        <div>
+                            <h3>CSS</h3>
+                            <p>Erfahren</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img
+                                src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                        />
+                        <div>
+                            <h3>SASS</h3>
+                            <p>Erfahren</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img
+                                src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                        />
+                        <div>
+                            <h3>JavaScript</h3>
+                            <p>Erfahren</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img
+                                src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                        />
+                        <div>
+                            <h3>TypeScript</h3>
+                            <p>Erfahren</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img
+                                src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                        />
+                        <div>
+                            <h3>Material UI</h3>
+                            <p>Erfahren</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="details-container">
+                <h2 class="experience-sub-title">Frontend-Entwicklung</h2>
+                <div class="article-container">
+                    <article>
+                        <img
+                                src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                        />
+                        <div>
+                            <h3>PostgreSQL</h3>
+                            <p>Anfänger</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img
+                                src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                        />
+                        <div>
+                            <h3>Node JS</h3>
+                            <p>Fortgeschritten</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img
+                                src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                        />
+                        <div>
+                            <h3>Express JS</h3>
+                            <p>Anfänger</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img
+                                src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                        />
+                        <div>
+                            <h3>Git</h3>
+                            <p>Erfahren</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img
+            src="./assets/arrow.png"
+            alt="Arrow icon"
+            class="icon arrow"
+            onclick="location.href='./#projects'"
+    />
+</section>
+<section id="projects">
+    <p class="section__text__p1">Meine letzten</p>
+    <h1 class="title">Projekte</h1>
+    <div class="experience-details-container">
+        <div class="about-containers">
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img
+                            src="./assets/project-1c.jpeg"
+                            alt="Project 1"
+                            class="project-img"
+                    />
+                </div>
+                <h2 class="experience-sub-title project-title">Concert UA</h2>
+                <div class="btn-container">
+                    <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/'"
+                    >
+                        Github
+                    </button>
+                    <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="window.open('https://concert.ua/uk/kyiv', '_blank')"
+                    >
+                        zur Website
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img
+                            src="./assets/project-2c.jpeg"
+                            alt="Project 2"
+                            class="project-img"
+                    />
+                </div>
+                <h2 class="experience-sub-title project-title">Neugestaltung</h2>
+                <div class="btn-container">
+                    <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/'"
+                    >
+                        Github
+                    </button>
+                    <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="window.open('https://concert.ua/uk/events/artem-pivovarov', '_blank')"
+                    >
+                        zur Website
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img
+                            src="./assets/project-3.png"
+                            alt="Project 3"
+                            class="project-img"
+                    />
+                </div>
+                <h2 class="experience-sub-title project-title">Hoobi</h2>
+                <div class="btn-container">
+                    <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/'"
+                    >
+                        Github
+                    </button>
+                    <button
+                            class="btn btn-color-2 project-btn"
+                    >
+                        zur Website
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img
+            src="./assets/arrow.png"
+            alt="Arrow icon"
+            class="icon arrow"
+            onclick="location.href='./#contact'"
+    />
+</section>
+<section id="contact">
+    <h1 class="title">Kontaktieren Sie mich</h1>
+    <div class="contact-info-upper-container">
+        <div class="contact-list-container">
+            <div class="contact-info-container">
+                <img
+                        src="./assets/email.png"
+                        alt="Email icon"
+                        class="icon contact-icon email-icon"
+                />
+                <p><a href="mailto:dima.pogorelov.4321@gmail.com" target="_blank">dima.pogorelov.4321@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img
+                        src="./assets/linkedin.png"
+                        alt="LinkedIn icon"
+                        class="icon contact-icon"
+                />
+                <p><a href="https://www.linkedin.com/in/dmitriy-pohorielov-7b645a250/" target="_blank">LinkedIn</a></p>
+            </div>
+        </div>
+        <div class="contact-info-container">
+            <img
+                    src="./assets/phone.png"
+                    alt="Phone icon"
+                    class="icon contact-icon"
+            />
+            <p>+4916095063537</p>
+        </div>
+    </div>
+</section>
+<footer>
+    <nav>
+        <div class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#experience">Erfahrung</a></li>
+                <li><a href="#projects">Projekte</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+    <p>Urheberrecht &#169; 2023 Dmytro Pohorielov. Alle Rechte vorbehalten.</p>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
