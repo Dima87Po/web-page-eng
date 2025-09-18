@@ -291,6 +291,10 @@ img:hover {
     flex-direction: column;
 }
 
+.text-container {
+    text-align: justify;
+}
+
 .about-containers,
 .about-details-container {
     display: flex;
@@ -352,7 +356,7 @@ img:hover {
     flex-wrap: wrap;
     flex-direction: row;
     gap: 2.5rem;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 article {
